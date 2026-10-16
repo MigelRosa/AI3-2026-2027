@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fatura id="2026/001">
+    <cabecalho>
+        <data>2026-10-16</data>
+        <cliente>
+            <nome>Miguel Rosa</nome>
+            <morada>rua de tras para frente, Porto</morada>
+            <telefone>912345678</telefone>
+        </cliente>
+    </cabecalho>
+    <produtos>
+        <produto>
+            <codigo>P001</codigo>
+            <designacao>Caderno A4</designacao>
+            <quantidade>2</quantidade>
+            <preco>3.50</preco>
+        </produto>
+    </produtos>
+</fatura>

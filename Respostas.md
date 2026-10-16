@@ -18,3 +18,32 @@
 4. A estrutura permite uma fatura sem produtos ou com dois clientes. O XML, por si só, não impede estas situações.
 
 5. Se as estruturas forem diferentes, o programa pode não conseguir encontrar os dados corretamente. Por isso, é importante combinar uma estrutura comum.
+
+
+Tarefa 2
+
+4.1
+O atributo ProductID foi declarado com use="required", tornando-o obrigatório, enquanto Category, sem essa indicação, é opcional por omissão.
+
+
+4.4
+
+1. Um schema resolve o problema das hierarquias diferentes?
+
+Sim, porque define uma estrutura comum. Deve ser criado antes dos documentos serem produzidos, por quem define as regras dos dados.
+
+2. Que valores absurdos o schema aceita para Price?
+
+Aceita valores como -100 ou 0. Para impedir isso, seriam necessárias restrições adicionais aos valores.
+
+3. O que acontece se for acrescentado um elemento obrigatório?
+
+Os documentos antigos sem esse elemento deixam de ser válidos. Se fosse opcional, usando minOccurs="0", isso não aconteceria.
+
+4. Qual é a vantagem de validar?
+
+Permite encontrar erros antes de os dados serem usados pelo programa, evitando problemas e trabalho extra na correção.
+
+5. Que documentos precisam de mixed="true"?
+
+Documentos com texto livre e elementos misturados, como uma notícia que inclua nomes de pessoas e datas no meio dos parágrafos

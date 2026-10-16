@@ -1,2 +1,21 @@
-[InternetShortcut]
-URL=https://github.com/cunhaestgv/AI3-2026-2027/issues/1
+
+<?xml version="1.0" encoding="UTF-8"?>
+<fatura>
+    <cabecalho>
+        <numero>2026/001</numero>
+        <data>2026-10-16</data>
+        <cliente>
+            <nome>João Silva</nome>
+            <morada>Rua Central, Viseu</morada>
+            <telefone>912345678</telefone>
+        </cliente>
+    </cabecalho>
+    <produtos>
+        <produto>
+            <codigo>P001</codigo>
+            <designacao>Caderno A4</designacao>
+            <quantidade>2</quantidade>
+            <preco>3.50</preco>
+        </produto>
+    </produtos>
+</fatura>

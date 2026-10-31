@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "titulo": "Melhorar os computadores da biblioteca",
+    "descricao": "Proponho atualizar os computadores da biblioteca para melhorar as condições de estudo e permitir a utilização de software educativo mais recente.",
+    "categoria": "instalacoes",
+    "numeroAluno": "12345",
+    "estado": "pendente"
+  },
+  {
+    "id": 2,
+    "titulo": "Criar mais sessões de apoio ao estudo",
+    "descricao": "Sugiro organizar sessões de apoio ao estudo para ajudar os alunos a esclarecer dúvidas e preparar melhor os trabalhos e avaliações.",
+    "categoria": "ensino",
+    "numeroAluno": "12345",
+    "estado": "em_analise"
+  },
+  {
+    "id": 3,
+    "titulo": "Alargar o horário dos serviços académicos",
+    "descricao": "Proponho alargar o horário dos serviços académicos para facilitar o atendimento aos alunos que têm aulas durante o horário habitual.",
+    "categoria": "servicos",
+    "numeroAluno": "67890",
+    "estado": "resolvida"
+  },
+  {
+    "id": 4,
+    "titulo": "Organizar mais atividades académicas",
+    "descricao": "Sugiro organizar atividades académicas e culturais ao longo do ano letivo para incentivar a participação e o convívio entre estudantes.",
+    "categoria": "atividades",
+    "numeroAluno": "12345",
+    "estado": "rejeitada"
+  }
+]

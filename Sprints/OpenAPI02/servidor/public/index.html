@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma de Sugestões ESTGV</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script type="module" src="app.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Plataforma de Sugestões ESTGV</h1>
+    <p>Partilha de ideias para melhorar a nossa escola.</p>
+  </header>
+
+  <main>
+
+    <!-- Área de entrada -->
+    <section id="entrada">
+      <h2>Iniciar sessão</h2>
+
+      <form id="formLogin">
+        <label for="utilizador">Utilizador</label>
+        <input
+          type="text"
+          id="utilizador"
+          autocomplete="username"
+          required
+        >
+
+        <label for="palavraPasse">Palavra-passe</label>
+        <input
+          type="password"
+          id="palavraPasse"
+          autocomplete="current-password"
+          required
+        >
+
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+
+    <!-- Área de sessão -->
+    <section id="sessao" hidden>
+      <h2>Área pessoal</h2>
+
+      <p>Nome: <span id="nomeUtilizador"></span></p>
+      <p>Papel: <span id="papelUtilizador"></span></p>
+
+      <p>
+        Expiração do token:
+        <span id="horaExpiracao"></span>
+      </p>
+
+      <p>
+        Tempo restante:
+        <span id="tempoRestante"></span>
+      </p>
+
+      <button type="button" id="btnSugestoes">
+        As minhas sugestões
+      </button>
+
+      <div id="listaSugestoes"></div>
+
+      <button type="button" id="btnSair">
+        Terminar sessão
+      </button>
+    </section>
+
+    <!-- Mensagens e erros -->
+    <div id="mensagem" role="alert" aria-live="assertive"></div>
+
+  </main>
+
+</body>
+</html>

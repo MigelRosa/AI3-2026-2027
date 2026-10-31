@@ -1,0 +1,149 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f5f8;
+  color: #263238;
+  line-height: 1.5;
+}
+
+header {
+  background: #174b78;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #dce8f1;
+}
+
+main {
+  width: min(850px, calc(100% - 32px));
+  margin: 40px auto;
+}
+
+section {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+section h2 {
+  margin-bottom: 20px;
+  color: #174b78;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccd3da;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  background: #174b78;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #103858;
+}
+
+/* Contorno visível ao utilizar o teclado */
+input:focus-visible,
+button:focus-visible {
+  outline: 3px solid #e58b19;
+  outline-offset: 3px;
+}
+
+/* Zona de mensagens */
+#mensagem {
+  margin-top: 18px;
+  font-weight: bold;
+}
+
+#mensagem:not(:empty) {
+  padding: 12px;
+  border: 2px solid #a83232;
+  border-left-width: 6px;
+  border-radius: 6px;
+  background: #fff0f0;
+}
+
+/* Sugestões */
+#listaSugestoes {
+  margin-top: 25px;
+}
+
+article {
+  border: 1px solid #e0e5ea;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+  
+article h3 {
+  color: #174b78;
+  margin-bottom: 12px;
+}
+
+article p {
+  margin-top: 8px;
+}
+
+/* Terminar sessão */
+#btnSair {
+  background: #c94b0a;
+}
+
+#btnSair:hover {
+  background: #a83d08;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Adaptação a ecrãs pequenos */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 23px;
+  }
+
+  main {
+    margin: 20px auto;
+  }
+
+  section {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Sugestões ESTGV</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script type="module" src="app.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Plataforma de Sugestões ESTGV</h1>
+        <p>Partilha de ideias para melhorar a nossa escola.</p>
+    </header>
+
+    <main>
+        <section id="configuracoes">
+            <h2>Configurações</h2>
+
+            <label for="tema">Tema</label>
+            <select id="tema">
+                <option value="claro">Claro</option>
+                <option value="escuro">Escuro</option>
+            </select>
+
+            <label for="ordenacao">Ordenação das sugestões</label>
+            <select id="ordenacao">
+                <option value="recentes">Mais recentes</option>
+                <option value="estado">Por estado</option>
+            </select>
+        </section>
+
+        <section data-area="a-verificar">
+            <h2>A verificar sessão...</h2>
+            <p>Por favor, aguarde.</p>
+        </section>
+
+        <section data-area="sem-sessao" hidden>
+            <h2>Iniciar sessão</h2>
+            <form id="formLogin">
+                <label for="utilizador">Utilizador</label>
+                <input type="text" id="utilizador" autocomplete="username" required>
+
+                <label for="palavraPasse">Palavra-passe</label>
+                <input type="password" id="palavraPasse" autocomplete="current-password" required>
+
+                <button type="submit">Entrar</button>
+            </form>
+            <!-- Formulário de autenticação será acrescentado aqui -->
+        </section>
+
+        <section data-area="com-sessao" hidden>
+            <h2 id="titulo-sessao" tabindex="-1">
+                Sessão iniciada
+            </h2>
+            <h2>Área pessoal</h2>
+
+            <p>Nome: <span id="nomeUtilizador"></span></p>
+            <p>Papel: <span id="papelUtilizador"></span></p>
+
+            <p>
+                Expiração do token:
+                <span id="horaExpiracao"></span>
+            </p>
+
+            <p>
+                Tempo restante:
+                <span id="tempoRestante"></span>
+            </p>
+            <div id="formNovaSugestao" hidden>
+                <h3>Nova sugestão</h3>
+
+                <form id="novaSugestao">
+                    <label for="tituloSugestao">Título</label>
+                    <input type="text" id="tituloSugestao" required>
+
+                    <label for="descricaoSugestao">Descrição</label>
+                    <textarea id="descricaoSugestao" required></textarea>
+
+                    <label for="categoriaSugestao">Categoria</label>
+                    <select id="categoriaSugestao" required>
+                        <option value="">Seleciona uma categoria</option>
+                        <option value="instalacoes">Instalações</option>
+                        <option value="equipamentos">Equipamentos</option>
+                        <option value="servicos">Serviços</option>
+                        <option value="outros">Outros</option>
+                    </select>
+
+                    <button type="submit">Enviar sugestão</button>
+                </form>
+            </div>
+
+            <button type="button" id="btnSugestoes">
+                As minhas sugestões
+            </button>
+
+            <div id="listaSugestoes"></div>
+
+            <button type="button" id="btnSair">
+                Terminar sessão
+            </button>
+            <!-- Área privada da aplicação será acrescentada aqui -->
+        </section>
+
+        <section data-area="sem-ligacao" hidden>
+            <h2>Sem ligação</h2>
+            <p>Não foi possível contactar o servidor.</p>
+        </section>
+
+        <!-- Mensagens e erros -->
+        <div id="mensagem" role="alert" aria-live="assertive"></div>
+        <button id="atualizar-app" hidden onclick="atualizarAplicacao()">
+            Atualizar a aplicação
+        </button>
+
+    </main>
+
+</body>
+
+</html>
